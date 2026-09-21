@@ -1,0 +1,307 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36">
+  <diagram id="2a216829-ef6e-dabb-86c1-c78162f3ba2b" name="Сторінка-1">
+    <mxGraphModel dx="277" dy="153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nskinparam style strictuml\n&#39; Збільшення вільного простору між блоками\nskinparam nodesep 80\nskinparam ranksep 80\n\n&#39; Стилізація кольорів\nskinparam ActivityBackgroundColor #cce5ff\nskinparam ActivityBorderColor #007bff\nskinparam NoteBackgroundColor #f8f9fa\nskinparam NoteBorderColor #6c757d\n\n|Гість|\nstart\n:Виникла потреба скасувати бронювання;\n:Надіслати заявку на скасування&gt;\n\n|Сайт (СтейНау)|\n:Отримано заявку на скасування&lt;\n:Перевірити терміни скасування\\nта умови тарифу;\nnote right\n  **Сховище даних:** База бронювань\n  ====\n  **Анотація:** Розмір штрафу залежить\n  від обраної політики скасування готелю\nend note\n\nif (Скасування безштрафне\\n(понад 48 год до заїзду)?) then (так)\n  :Розрахувати повну суму\\nповернення (100%);\nelse (ні)\n  :Розрахувати суму повернення\\nза мінусом штрафу;\nendif\n\n&#39; Синхронізуючий шлюз після if/else мається на увазі автоматично\n:Повернути кошти на картку гостя\\n[Дія-компенсація];\n\nfork\n  :Розблокувати номер у календарі;\n  \n  |Менеджер готелю|\n  :Номер знову доступний у продажу;\n  stop\n\nfork again\n  |Сайт (СтейНау)|\n  :Сформувати квитанцію скасування;\n  note right: Об&#39;єкт даних:\\nКвитанція скасування\n  \n  :Надіслати підтвердження\\nскасування та чек&gt;\n  \n  |Гість|\n  :Бронювання скасовано, кошти повернуто;\n  stop\nend fork\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="X4bkC-M-j-mybJLkYLb--1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Гість" plantUmlId="lane_55" plantUmlBaseStyle="swimlane;collapsible=0;startSize=30;fillColor=none;swimlaneFillColor=none;strokeColor=#181818;strokeWidth=1.5;fontColor=#000000;fontSize=18;fontStyle=0;html=1;" plantUmlBaseValue="Гість" id="X4bkC-M-j-mybJLkYLb--2">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="swimlane;collapsible=0;startSize=30;fillColor=none;swimlaneFillColor=none;strokeColor=#181818;strokeWidth=1.5;fontColor=#000000;fontSize=18;fontStyle=0;html=1;" vertex="1">
+            <mxGeometry height="910" width="296" x="80" y="140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_1" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--6">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--2" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--7">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="148" y="50" as="sourcePoint" />
+              <mxPoint x="148" y="70" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Виникла потреба скасувати бронювання" plantUmlId="action_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Виникла потреба скасувати бронювання" id="X4bkC-M-j-mybJLkYLb--7">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--2" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="255" x="20.5" y="70" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_3" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.478;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--8">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--2" source="X4bkC-M-j-mybJLkYLb--7" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.478;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--9">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="148" y="106" as="sourcePoint" />
+              <mxPoint x="148" y="126" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Надіслати заявку на скасування" plantUmlId="action_4" plantUmlBaseStyle="shape=mxgraph.basic.polygon;polyline=0;polyCoords=[[0,0],[0.9554,0],[1,0.5],[0.9554,1],[0,1]];fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Надіслати заявку на скасування" id="X4bkC-M-j-mybJLkYLb--9">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--2" style="shape=mxgraph.basic.polygon;polyline=0;polyCoords=[[0,0],[0.9554,0],[1,0.5],[0.9554,1],[0,1]];fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="224" x="41" y="126" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="start_0" plantUmlBaseStyle="ellipse;fillColor=#222222;strokeColor=#222222;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--5">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--2" style="ellipse;fillColor=#222222;strokeColor=#222222;" vertex="1">
+            <mxGeometry height="20" width="20" x="138" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="stop_52" plantUmlBaseStyle="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--42">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--2" style="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;" vertex="1">
+            <mxGeometry height="24" width="24" x="138" y="816" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Бронювання скасовано, кошти повернуто" plantUmlId="action_48" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Бронювання скасовано, кошти повернуто" id="X4bkC-M-j-mybJLkYLb--40">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--2" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="259" x="20.5" y="760" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_53" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--43">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--2" source="X4bkC-M-j-mybJLkYLb--40" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--42">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="256" y="732" as="sourcePoint" />
+              <mxPoint x="256" y="752" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Сайт (СтейНау)" plantUmlId="lane_56" plantUmlBaseStyle="swimlane;collapsible=0;startSize=30;fillColor=none;swimlaneFillColor=none;strokeColor=#181818;strokeWidth=1.5;fontColor=#000000;fontSize=18;fontStyle=0;html=1;" plantUmlBaseValue="Сайт (СтейНау)" id="X4bkC-M-j-mybJLkYLb--3">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="swimlane;collapsible=0;startSize=30;fillColor=none;swimlaneFillColor=none;strokeColor=#181818;strokeWidth=1.5;fontColor=#000000;fontSize=18;fontStyle=0;html=1;" vertex="1">
+            <mxGeometry height="910" width="550" x="490" y="140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Розблокувати номер у календарі" plantUmlId="action_32" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Розблокувати номер у календарі" id="X4bkC-M-j-mybJLkYLb--29">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--3" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="214" x="26" y="590" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Сформувати квитанцію скасування" plantUmlId="action_42" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Сформувати квитанцію скасування" id="X4bkC-M-j-mybJLkYLb--35">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--3" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="224" x="270" y="590" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteptr_44" plantUmlBaseStyle="triangle;direction=west;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=0.5;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--36">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--3" style="triangle;direction=south;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=0.5;" vertex="1">
+            <mxGeometry height="21" width="8" x="436.5" y="566.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Надіслати підтвердження&#xa;скасування та чек" plantUmlId="action_45" plantUmlBaseStyle="shape=mxgraph.basic.polygon;polyline=0;polyCoords=[[0,0],[0.9454,0],[1,0.5],[0.9454,1],[0,1]];fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Надіслати підтвердження&#xa;скасування та чек" id="X4bkC-M-j-mybJLkYLb--38">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--3" style="shape=mxgraph.basic.polygon;polyline=0;polyCoords=[[0,0],[0.9454,0],[1,0.5],[0.9454,1],[0,1]];fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="183" x="295.5" y="646" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_46" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.473;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--39">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--3" source="X4bkC-M-j-mybJLkYLb--35" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.473;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--38">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="382" y="626" as="sourcePoint" />
+              <mxPoint x="382" y="646" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="X4bkC-M-j-mybJLkYLb--140" parent="X4bkC-M-j-mybJLkYLb--3" style="points=[[0.25,0.25,0],[0.5,0,0],[0.75,0.25,0],[1,0.5,0],[0.75,0.75,0],[0.5,1,0],[0.25,0.75,0],[0,0.5,0]];shape=mxgraph.bpmn.gateway2;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=rhombusPerimeter;outlineConnect=0;outline=none;symbol=none;gwType=parallel;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="245.5" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="X4bkC-M-j-mybJLkYLb--141" edge="1" parent="X4bkC-M-j-mybJLkYLb--3" source="X4bkC-M-j-mybJLkYLb--140" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=blockThin;endFill=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="X4bkC-M-j-mybJLkYLb--29" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="133" y="570" />
+            </Array>
+            <mxPoint x="270" y="550" as="sourcePoint" />
+            <mxPoint x="245.5" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Об&#39;єкт даних:&#xa;Квитанція скасування" plantUmlId="note_43" plantUmlBaseStyle="shape=note;size=10;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=0.5;fontSize=13;fontColor=#000000;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=4;" plantUmlBaseValue="Об&#39;єкт даних:&#xa;Квитанція скасування" id="X4bkC-M-j-mybJLkYLb--37">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--3" style="shape=note;size=10;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=0.5;fontSize=13;fontColor=#000000;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=4;" vertex="1">
+            <mxGeometry height="25" width="164" x="386" y="540" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Менеджер готелю" plantUmlId="lane_57" plantUmlBaseStyle="swimlane;collapsible=0;startSize=30;fillColor=none;swimlaneFillColor=none;strokeColor=#181818;strokeWidth=1.5;fontColor=#000000;fontSize=18;fontStyle=0;html=1;" plantUmlBaseValue="Менеджер готелю" id="X4bkC-M-j-mybJLkYLb--4">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="swimlane;collapsible=0;startSize=30;fillColor=none;swimlaneFillColor=none;strokeColor=#181818;strokeWidth=1.5;fontColor=#000000;fontSize=18;fontStyle=0;html=1;" vertex="1">
+            <mxGeometry height="910" width="344" x="1040" y="140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Сховище даних:&lt;/b&gt; База бронювань&lt;hr style=&quot;border:none;border-top:3px double #181818;margin:4px 0 5px;&quot;&gt;&lt;b&gt;Анотація:&lt;/b&gt; Розмір штрафу залежить&lt;br&gt;від обраної політики скасування готелю" plantUmlId="note_11" plantUmlBaseStyle="shape=note;size=10;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=0.5;fontSize=13;fontColor=#000000;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=4;html=1;" plantUmlBaseValue="&lt;b&gt;Сховище даних:&lt;/b&gt; База бронювань&lt;hr style=&quot;border:none;border-top:3px double #181818;margin:4px 0 5px;&quot;&gt;&lt;b&gt;Анотація:&lt;/b&gt; Розмір штрафу залежить&lt;br&gt;від обраної політики скасування готелю" id="X4bkC-M-j-mybJLkYLb--14">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--4" style="shape=note;size=10;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=0.5;fontSize=13;fontColor=#000000;whiteSpace=wrap;align=left;verticalAlign=middle;spacingLeft=4;html=1;" vertex="1">
+            <mxGeometry height="71" width="287" x="28.5" y="400" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Номер знову доступний у продажу" plantUmlId="action_34" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Номер знову доступний у продажу" id="X4bkC-M-j-mybJLkYLb--30">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--4" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="218" x="90" y="800" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="stop_38" plantUmlBaseStyle="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--32">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--4" style="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;" vertex="1">
+            <mxGeometry height="24" width="24" x="187" y="856" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_39" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--33">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--4" source="X4bkC-M-j-mybJLkYLb--30" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--32">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="199" y="836" as="sourcePoint" />
+              <mxPoint x="199" y="856" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_5" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.478;exitY=1;exitDx=0;exitDy=0;entryX=0.477;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--10">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--9" style="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.478;exitY=1;exitDx=0;exitDy=0;entryX=0.477;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;dashed=1;" target="X4bkC-M-j-mybJLkYLb--11">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="230" y="310" />
+                <mxPoint x="760.51" y="307" />
+              </Array>
+              <mxPoint x="335.5" y="302" as="sourcePoint" />
+              <mxPoint x="646.5" y="322" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Отримано заявку на скасування" plantUmlId="action_8" plantUmlBaseStyle="shape=mxgraph.basic.polygon;polyline=0;polyCoords=[[0,0],[1,0],[0.9539,0.5],[1,1],[0,1]];fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Отримано заявку на скасування" id="X4bkC-M-j-mybJLkYLb--11">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="shape=mxgraph.basic.polygon;polyline=0;polyCoords=[[0,0],[1,0],[0.9539,0.5],[1,1],[0,1]];fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="217" x="657" y="322" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_9" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.477;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--12">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--11" style="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.477;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--13">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="760.5" y="358" as="sourcePoint" />
+              <mxPoint x="760.5" y="378" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Перевірити терміни скасування&#xa;та умови тарифу" plantUmlId="action_10" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Перевірити терміни скасування&#xa;та умови тарифу" id="X4bkC-M-j-mybJLkYLb--13">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="210" x="655.5" y="378" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_12" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--15">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--13" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--16">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="760.5" y="414" as="sourcePoint" />
+              <mxPoint x="760.5" y="434" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Скасування безштрафне&#xa;(понад 48 год до заїзду)?" plantUmlId="diamond_14" plantUmlBaseStyle="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#cce5ff;strokeColor=#007bff;whiteSpace=wrap;fontSize=11;" plantUmlBaseValue="Скасування безштрафне&#xa;(понад 48 год до заїзду)?" id="X4bkC-M-j-mybJLkYLb--16">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#cce5ff;strokeColor=#007bff;whiteSpace=wrap;fontSize=11;" vertex="1">
+            <mxGeometry height="28" width="163" x="679" y="434" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="так" plantUmlId="e_15" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="так" id="X4bkC-M-j-mybJLkYLb--17">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--16" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--18">
+            <mxGeometry relative="1" x="-0.68" as="geometry">
+              <Array as="points">
+                <mxPoint x="663" y="448" />
+              </Array>
+              <mxPoint x="679" y="448" as="sourcePoint" />
+              <mxPoint x="663" y="482" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Розрахувати повну суму&#xa;повернення (100%)" plantUmlId="action_17" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Розрахувати повну суму&#xa;повернення (100%)" id="X4bkC-M-j-mybJLkYLb--18">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="163" x="581.5" y="482" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ні" plantUmlId="e_18" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="ні" id="X4bkC-M-j-mybJLkYLb--19">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--16" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--20">
+            <mxGeometry relative="1" x="-0.507" as="geometry">
+              <Array as="points">
+                <mxPoint x="875" y="448" />
+              </Array>
+              <mxPoint x="842" y="448" as="sourcePoint" />
+              <mxPoint x="875" y="482" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Розрахувати суму повернення&#xa;за мінусом штрафу" plantUmlId="action_20" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Розрахувати суму повернення&#xa;за мінусом штрафу" id="X4bkC-M-j-mybJLkYLb--20">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="197" x="776.5" y="482" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="merge_21" plantUmlBaseStyle="rhombus;fillColor=#cce5ff;strokeColor=#007bff;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--21">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="rhombus;fillColor=#cce5ff;strokeColor=#007bff;" vertex="1">
+            <mxGeometry height="24" width="24" x="748.5" y="538" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_22" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--22">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--18" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--21">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="663" y="550" />
+              </Array>
+              <mxPoint x="663" y="518" as="sourcePoint" />
+              <mxPoint x="748.5" y="550" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_24" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--23">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--20" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--21">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="875" y="550" />
+              </Array>
+              <mxPoint x="875" y="518" as="sourcePoint" />
+              <mxPoint x="772.5" y="550" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_26" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--24">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--21" style="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--25">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="760.5" y="562" as="sourcePoint" />
+              <mxPoint x="760.5" y="582" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Повернути кошти на картку гостя&#xa;[Дія-компенсація]" plantUmlId="action_27" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" plantUmlBaseValue="Повернути кошти на картку гостя&#xa;[Дія-компенсація]" id="X4bkC-M-j-mybJLkYLb--25">
+          <mxCell parent="X4bkC-M-j-mybJLkYLb--1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#cce5ff;strokeColor=#007bff;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=6;" vertex="1">
+            <mxGeometry height="36" width="218" x="651.5" y="582" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_35" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--31">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--29" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="X4bkC-M-j-mybJLkYLb--30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="623" y="850" />
+                <mxPoint x="930" y="850" />
+                <mxPoint x="1240" y="850" />
+              </Array>
+              <mxPoint x="630" y="770" as="sourcePoint" />
+              <mxPoint x="1236" y="720" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_28" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.499;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="X4bkC-M-j-mybJLkYLb--26">
+          <mxCell edge="1" parent="X4bkC-M-j-mybJLkYLb--1" source="X4bkC-M-j-mybJLkYLb--25" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="X4bkC-M-j-mybJLkYLb--140">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="760.5" y="618" as="sourcePoint" />
+              <mxPoint x="759.99" y="660" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="X4bkC-M-j-mybJLkYLb--143" edge="1" parent="1" source="X4bkC-M-j-mybJLkYLb--140" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=blockThin;endFill=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="690" />
+            </Array>
+            <mxPoint x="877" y="700" as="sourcePoint" />
+            <mxPoint x="870" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4bkC-M-j-mybJLkYLb--144" edge="1" parent="1" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endFill=0;startFill=0;endSize=6;startSize=6;dashed=1;dashPattern=1 4;endArrow=openThin;startArrow=none;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="530" y="750" as="sourcePoint" />
+            <mxPoint x="690" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4bkC-M-j-mybJLkYLb--146" edge="1" parent="1" source="X4bkC-M-j-mybJLkYLb--38" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endFill=0;startFill=0;endSize=6;startSize=6;dashed=1;dashPattern=1 4;endArrow=openThin;startArrow=none;rounded=0;exitX=-0.011;exitY=0.42;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="850" />
+            </Array>
+            <mxPoint x="660" y="810" as="sourcePoint" />
+            <mxPoint x="220" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
