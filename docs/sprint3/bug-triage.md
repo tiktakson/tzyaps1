@@ -469,7 +469,7 @@
 
 1. `docs/sprint3/03_Спринт3_Тест-кейси_і_дефекти.pdf` — регламент, розділи 4.7, 4.8, 4.12–4.15, 6, 7.
 2. `docs/sprint2/SRS-1.1.md` — вимоги `F10`, `F20`, `F30`, `F40`, `F50`, `F60`, `F70`, `F90`, `F100`, `F120`, `GUI10`, `GUI20`, `GUI30`, `GUI40`, `GUI70`, `BL20`.
-3. `docs/sprint3/test-cases.xlsx` — 28 TC, аркуші «Аркуш1» і «Review».
+3. `docs/sprint3/test-cases.xlsx` — 28 TC, аркуші «Test cases», «Coverage» і «Review».
 4. `docs/sprint3/test-matrix.md` — канонічний набір 28 TC, матриця трасування.
 5. `docs/sprint3/bug-reports(1).xlsx` — 8 звітів, статуси синхронізовано з GitHub Issue (`open`/`new`).
 6. GitHub Issues #15–#24 та скріншоти в коментарях.
