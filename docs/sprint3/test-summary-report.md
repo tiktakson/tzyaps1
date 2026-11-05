@@ -288,7 +288,7 @@ pie title Розподіл дефектів за рівнем серйознос
 1. **Щільність дефектів на тест-кейс (Defect Density per Test Case):**
    $$\text{Defect Density}_{\text{TC}} = \frac{8 \text{ дефектів}}{28 \text{ тест-кейсів}} = \mathbf{0.286} \text{ дефекта / тест-кейс}$$
 2. **Щільність дефектів на вимогу (Defect Density per Requirement):**
-   $$\text{Defect Density}_{\text{Req}} = \frac{8 \text{ дефектів}}{38 \text{ покритих вимог}} = \mathbf{0.211} \text{ дефекта / вимогу}$$
+   $$\text{Defect Density}_{\text{Req}} = \frac{8 \text{ дефектів}}{30 \text{ покритих вимог}} = \mathbf{0.267} \text{ дефекта / вимогу}$$
 3. **Частка заблокованого тестового покриття (Blocked Test Ratio):**
    $$\text{Blocked Ratio} = \frac{5 \text{ заблокованих кейсів}}{28 \text{ тест-кейсів}} \times 100\% = \mathbf{17.86\%}$$
 4. **Рівень достовірності звітів про дефекти (Defect Acceptance Rate):**

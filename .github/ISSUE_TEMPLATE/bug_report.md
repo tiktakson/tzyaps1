@@ -8,7 +8,7 @@ labels: ["bug", "severity:blocker", "priority:P1", "status:new", "sprint:3"]
 
 **Severity:** Blocker
 **Priority:** P1 / High
-**Environment:** Public Demo (`https://automationintesting.online`), Firefox 158.0.1 (64-bit), Arch Linux, без авторизації
+**Environment:** Public Demo (`https://automationintesting.online`), стан demo `<ДД.ММ.РРРР>`, Firefox 158.0.1 (64-bit), Arch Linux, без авторизації
 **Linked TC / requirement:** TC-03 / SRS 1.1 (F20, GUI40)
 **Reporter:** Оніщук Ілля, 31.10.2026
 **Reviewer:** Дубчак Богдан, 31.10.2026
